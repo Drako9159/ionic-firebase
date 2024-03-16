@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Nueva noticia
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="ion-padding">
+    <ion-list>
+
+      <ion-item>
+        <ion-input labelPlacement="stacked" label="Título" placeholder="escribe un título" type="text"
+          [(ngModel)]="event.title">
+          <ion-icon slot="start" name="create-outline" aria-hidden="true"></ion-icon>
+          <ion-button fill="clear" slot="end" aria-label="Show/hide">
+          </ion-button>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input labelPlacement="stacked" label="Fecha" placeholder="12/11/2023" type="date" [(ngModel)]="event.date">
+          <ion-icon slot="start" name="calendar-outline" aria-hidden="true"></ion-icon>
+          <ion-button fill="clear" slot="end" aria-label="Show/hide">
+            <!-- <ion-icon slot="icon-only" name="eye" aria-hidden="true"></ion-icon> -->
+          </ion-button>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input labelPlacement="stacked" label="Descripción" placeholder="escribe una descripción" type="text"
+          [(ngModel)]="event.description">
+          <ion-icon slot="start" name="create-outline" aria-hidden="true"></ion-icon>
+          <ion-button fill="clear" slot="end" aria-label="Show/hide">
+          </ion-button>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input labelPlacement="stacked" label="Imágen" placeholder="inserta la dirección de una imágen" type="text"
+          [(ngModel)]="event.image">
+          <ion-icon slot="start" name="image-outline" aria-hidden="true"></ion-icon>
+          <ion-button fill="clear" slot="end" aria-label="Show/hide">
+          </ion-button>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-button (click)="addEvent()">Agregar</ion-button>
+      </ion-item>
+
+
+    </ion-list>
+  </div>
+</ion-content>

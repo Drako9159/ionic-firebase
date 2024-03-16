@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Noticias
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div *ngFor="let event of events">
+    <ion-card>
+      <img alt="Silhouette of mountains" src="{{event.image}}" />
+      <ion-card-header>
+        <div class="info-title">
+          <ion-card-title>{{event.title}}</ion-card-title>
+        </div>
+        <div class="info-date">
+          <ion-card-subtitle class="date">{{event.date}}</ion-card-subtitle>
+        </div>
+      </ion-card-header>
+
+      <ion-card-content>
+        {{event.description}}
+      </ion-card-content>
+      <ion-item>
+        <ion-button style="--background: red;" (click)="deleteEvent(event)">Eliminar</ion-button>
+      </ion-item>
+    </ion-card>
+  </div>
+</ion-content>

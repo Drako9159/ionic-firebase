@@ -1,0 +1,4 @@
+npm install @capacitor/cli @capacitor/core
+ionic build
+npx cap add android
+npx cap open android

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ionic-firebase-33605": {
+      "hosting": {
+        "app": [
+          "ionic-firebase-33605"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ionic-firebase-33605"
+  }
+}
